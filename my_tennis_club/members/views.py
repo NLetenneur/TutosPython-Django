@@ -16,4 +16,8 @@ def details(request, id):
   context = {
     'mymember': mymember,
   }
-  return HttpResponse(template.render(context, request))
+  return HttpResponse(template.render(context, request)) 
+
+def main(request):
+  template = loader.get_template('mainIndex.html')
+  return HttpResponse(template.render())
